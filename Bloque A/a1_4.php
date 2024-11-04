@@ -14,7 +14,7 @@ $best_sellers = ['Chocolate', 'Mints', 'Fudge',
 <?php
 //1: divido el array en dos
 $arr1 = [$best_sellers[0], $best_sellers[1], $best_sellers[2]]  //pongo los elementos hasta 'Fudge'
-$arr1 = "Frogurt";  //añado un elemento
+$arr1[] = "Frogurt";  //añado un elemento
 $arr2 = array_slice($best_sellers, 3);  //otro array que usaremos después
 $best_sellers = array_merge($arr1, $arr2);
 ?>
