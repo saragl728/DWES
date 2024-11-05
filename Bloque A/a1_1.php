@@ -1,18 +1,21 @@
 <?php
-$name='Sara';
-$price=2;
+$name = 'Sara';
+$price = 2;
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Variables</title>
-<link rel="stylesheet" href="css/styles.css">
+    <title>Variables</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-<h1>The Candy Store</h1>
-<?php $name='Melia'?>   //cambio el nombre(a.2)
-<h2>Welcome <?php echo $name; ?></h2>
-<p>The cost of your candy is
-$<?php echo $price; ?> per pack.</p>
+    <h1>The Candy Store</h1>
+    <?php $name = 'Melia' ?> //cambio el nombre(a.2)
+    <h2>Welcome <?php echo $name; ?></h2>
+    <p>The cost of your candy is
+        $<?php echo $price; ?> per pack.</p>
 </body>
+
 </html>
