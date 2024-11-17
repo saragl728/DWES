@@ -52,11 +52,11 @@ $global_prices = calculate_prices($us_price, $rates);
         CAD $<?= $global_prices['cad'] ?>
     </p>
     <table>
-        <th>
-        <td>Bottomless Peanut Bag</td>
-        <td>Cotton Candy</td>
-        <td>Frogurt</td>
-        </th>
+        <tr>
+            <th>Bottomless Peanut Bag</th>
+            <th>Cotton Candy</th>
+            <th>Frogurt</th>
+        </tr>
         <tbody>
             <!--fila con los precio originales en dólares-->
             <tr>
