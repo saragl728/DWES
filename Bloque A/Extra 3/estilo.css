@@ -1,0 +1,18 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+th {
+  background-color: #115e8b;
+  color: #fff;
+}
+
+th,
+td {
+  border-collapse: collapse;
+  border: #111 solid 1px;
+}
+
+tr:hover {
+  background-color: #def;
+}

@@ -29,12 +29,8 @@ function getImpuestos($precio, $cantidad, $tax = 0)
 <html>
 
 <head>
-    <title></title>
-    <style>
-        * {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-    </style>
+    <title>3.12: Librería</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
