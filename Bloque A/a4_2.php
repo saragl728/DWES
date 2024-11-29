@@ -11,7 +11,21 @@ $prs = [$pr1, $pr2, $pr3];
 <!DOCTYPE html>
 <html>
 
-<head></head>
+<head>
+    <title>Ejercicio 4.2</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        th, td{
+            border: solid 1px #111;
+            border-collapse: collapse;
+        }
+        th {
+            background-color: #cfc;
+        }
+    </style>
+</head>
 
 <body>
     <table>
