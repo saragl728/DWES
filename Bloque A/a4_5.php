@@ -1,8 +1,8 @@
 <?php
 class Book
 {
-    public string $title;
-    public string $author;
+    private string $title;
+    private string $author;
     private int $nPages;
     public function __construct(string $title, string $author, int $nPages = 100)
     {
@@ -10,6 +10,16 @@ class Book
         $this->author = $author;
         if ($nPages > 0)
             $this->nPages = $nPages;
+    }
+
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+
+    public function getAuthor(): string
+    {
+        return $this->author;
     }
 
     public function getPaginas()
@@ -43,7 +53,8 @@ class Library
         }
     }
 
-    public function getLibrios(){
+    public function getLibrios()
+    {
         return $this->librios;
     }
 

@@ -1,8 +1,19 @@
 <?php
 class Library
 {
-    public string $libraryName;
+    private string $libraryName;
     private array $books;
+
+    public function __construct(string $libraryName, array $books = [])
+    {
+        $this->libraryName = $libraryName;
+        $this->books = $books;
+    }
+
+    public function getLibraryName(): string
+    {
+        return $this->libraryName;
+    }
 
     public function addBook(string $book)
     {
@@ -27,8 +38,7 @@ class Library
     }
 }
 
-$biblioteca = new Library();
-$biblioteca->libraryName = "Biblioteca Rudea";
+$biblioteca = new Library("Biblioteca Rudea");
 //añado libros
 $biblioteca->addBook("The Cursed Clown Doll");
 $biblioteca->addBook("The Crystal Turtle");
@@ -51,7 +61,7 @@ $biblioteca->removeBook("The Fake Choice");
 </head>
 
 <body>
-    <p>Library's name: <?= $biblioteca->libraryName ?></p>
+    <p>Library's name: <?= $biblioteca->getLibraryName() ?></p>
     <p>Books</p>
     <ol>
         <?php for ($i = 0; $i < count($biblioteca->getBooks()); $i++) { ?>

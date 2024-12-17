@@ -1,9 +1,9 @@
 <?php
 class Vehicle
 {
-    public string $make;
-    public string $model;
-    public string $licencePlate;
+    private string $make;
+    private string $model;
+    private string $licencePlate;
     private bool $avalaible;
 
     public function __construct($make, $model, $licensePlate, $available)
@@ -12,6 +12,21 @@ class Vehicle
         $this->model = $model;
         $this->licensePlate = $licensePlate;
         $this->available = $available;
+    }
+
+    public function getMake(): string
+    {
+        return $this->make;
+    }
+
+    public function getModel(): string
+    {
+        return $this->model;
+    }
+
+    public function getLicensePlate(): string
+    {
+        return $this->licencePlate;
     }
 
     public function getDetails()
@@ -29,13 +44,18 @@ class Vehicle
 
 class Fleet
 {
-    public string $name;
+    private string $name;
     private array $vehicles;
 
-    public function __construct($name, $vehicles)
+    public function __construct(string $name, array $vehicles)
     {
         $this->name = $name;
         $this->vehicles = $vehicles;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
     }
 
     public function addVehicle(Vehicle $vehicle)
@@ -43,12 +63,12 @@ class Fleet
         $this->vehicles[] = $vehicle;
     }
 
-    public function listVehicles()
+    public function listVehicles(): array
     {
         return $this->vehicles;
     }
 
-    public function listAvailableVehicles()
+    public function listAvailableVehicles(): array
     {
         $arrai = [];
         foreach ($this->vehicles as $vehicle) {
@@ -84,7 +104,7 @@ $parque = new Fleet('Flota Powell', $vehiculos);
 </head>
 
 <body>
-    <h1><?= $parque->name ?></h1>
+    <h1><?= $parque->getName() ?></h1>
     <table>
         <th>
             <tr>Matrícula</tr>
@@ -94,10 +114,10 @@ $parque = new Fleet('Flota Powell', $vehiculos);
         </th>
         <tr>
             <?php for ($i = 0; $i < count($parque->listVehicles()); $i++) { ?>
-            <tr><?=$parque->listVehicles()[$i]->licencePlate?></tr>
-            <tr><?=$parque->listVehicles()[$i]->make?></tr>
-            <tr><?=$parque->listVehicles()[$i]->model?></tr>
-            <tr><?=$parque->listVehicles()[$i]->isAvailable()?></tr>
+            <tr><?= $parque->listVehicles()[$i]->getLicensePlate() ?></tr>
+            <tr><?= $parque->listVehicles()[$i]->getMake() ?></tr>
+            <tr><?= $parque->listVehicles()[$i]->getModel() ?></tr>
+            <tr><?= $parque->listVehicles()[$i]->isAvailable() ?></tr>
         <?php } ?>
         </tr>
     </table>
