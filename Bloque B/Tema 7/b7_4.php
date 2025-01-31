@@ -55,13 +55,6 @@ function redimiensionar($origen, $nuevaRuta)
 
 }
 
-/*Los usuarios pueden subir imágenes de productos con formato .jpeg, .jpg, .png, o .gif.
-El tamaño máximo de las imágenes subidas es de 5MB.
-Se debe crear una versión miniatura de la imagen con dimensiones máximas de
-200x200 píxeles.
-Las imágenes originales se almacenarán en la carpeta uploads/ , mientras que las
-miniaturas se guardarán en uploads/thumbs/ .*/
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_FILES['archivo']['error'] === 0) {
         //necesito las carpetas /uploads y /uploads/thumbs

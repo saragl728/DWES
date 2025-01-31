@@ -24,17 +24,8 @@ function crearNombreArchivo($nombreArchivo, $ruta)
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_FILES['archivo']['error'] === 0) {
         $resultadoSubida = 'La imagen se ha subido correctamente';
-        /*$temp = $_FILES['archivo']['tmp_name'];
-        $path = '/var/www/images/' . $_FILES['archivo']['name'];
-        $movido = move_uploaded_file($temp, $path);*/
-
         $path = crearNombreArchivo($_FILES['archivo']['tmp_name'], '/var/www/images');
 
-
-        /*Limpieza de nombres de ficheros
-        Evitar sobreescribir ficheros ya existentes
-        Validación de tipos de medios
-        Validación del tamaño de ficheros*/
 
         if ($movido == true) {
             $resultadoSubida = "<img src='$path' alt='Nueva imagen'>";

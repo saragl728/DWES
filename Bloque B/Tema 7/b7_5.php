@@ -35,7 +35,6 @@ function create_filename($filename, $upload_path)              // Function to ma
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_FILES['archivo']['error'] == 0) {
-        //necesito las carpetas /uploads y /uploads/thumbs
 
         $filename = create_filename($_FILES['image']['name'], $upload_path);
         $destination = $upload_path . $filename;

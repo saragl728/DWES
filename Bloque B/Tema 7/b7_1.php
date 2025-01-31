@@ -1,7 +1,6 @@
 <?php
 $resultadoSubida = '';
 
-//no me reconoce el archivo por algún motivo
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_FILES['archivo']['error'] === 0) {
         $resultadoSubida = 'La imagen se ha subido correctamente';
