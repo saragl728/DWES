@@ -59,9 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_FILES['archivo']['error'] === 0) {
         //necesito las carpetas /uploads y /uploads/thumbs
         $movido = move_uploaded_file($_FILES['archivo']['tmp_name'], '/var/www/uploads');
-        //$thumbpath
-        /*$redimensionado = redimiensionar('', '');
-        $resultadoSubida = $redimensionado;*/
+
 
     } else {
         $resultadoSubida = 'No se ha podido subir el archivo';
