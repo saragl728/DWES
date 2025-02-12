@@ -15,7 +15,7 @@ $fec4 = clone $fec3;
 $fec4->modify('+3 months 15 min');
 
 ?>
-<html>
+<!DOCTYPE html>
 
 <head>
     <title>Ejercicio 8-3</title>

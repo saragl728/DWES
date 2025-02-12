@@ -29,7 +29,7 @@ if ($ahora < $tiempoInicio) {
 }
 
 ?>
-<html>
+<!DOCTYPE html>
 
 <head>
     <title>Ejercicio 8-1</title>
@@ -38,10 +38,10 @@ if ($ahora < $tiempoInicio) {
 
 <body>
     <section class="page">
-    <p>Fecha actual: <b><?= date("d-m-Y", $ahora) ?></b></p>
-    <p><?= $mensajeEstado ?></p>
-    <p>Fecha de inicio del evento: <b><?= date("d-m-Y", $tiempoInicio) ?></b></p>
-    <p>Fecha de finalización del evento: <b><?= date("d-m-Y", $tiempoFin) ?></b></p>
+        <p>Fecha actual: <b><?= date("d-m-Y", $ahora) ?></b></p>
+        <p><?= $mensajeEstado ?></p>
+        <p>Fecha de inicio del evento: <b><?= date("d-m-Y", $tiempoInicio) ?></b></p>
+        <p>Fecha de finalización del evento: <b><?= date("d-m-Y", $tiempoFin) ?></b></p>
     </section>
 
 </body>
