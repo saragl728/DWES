@@ -1,5 +1,5 @@
+<?php setlocale(LC_TIME, 'es_ES.UTF-8'); ?>
 <?php
-//$fechaa;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $fechaa = date_create_from_format("d/m/Y H:i:s", $_POST['fecha']);
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <section class="page">
             <p>Tiempo UNIX: <?= $timUnix ?></p>
             <p>Fecha y hora: <?= $fechaa->format('Y-m-d H:i:s') ?></p>
-            <p>Otro formato: </p>
+            <p>Otro formato: <?= $fechaa->format('d F Y H:i:s') ?></p>
         </section>
     </form>
 </body>
